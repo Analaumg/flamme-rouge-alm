@@ -15,7 +15,7 @@ Cartas de fatiga ilimitadas
 6.- Se agregan tarjetas de fatiga necesarias 
 7.- volver al punto 2 
 
-##Iniciar el programa
+## Iniciar el programa
 
 
 First, run the development server:
