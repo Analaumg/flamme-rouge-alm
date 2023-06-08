@@ -7,12 +7,19 @@ Cartas de fatiga ilimitadas
 
 ## Dinamica del juego 
 1.- Separar tarjetas de fatiga y mezclarar ambos mazos. 
+
 2.-Tomar 3 tarjetas superiores de los mazos 
+
 2.1.- Si no hay sufifcientes tarjetas en el mazo mezclar con la pila de descarte 
+
 3.-Elegir una tarjeta de las 3, el resto se van a la pila de descarte 
+
 4.- Se ejecuta el avance de cada tarjeta
+
 5.- La tarjeta ejecutada se remueve del juego  
+
 6.- Se agregan tarjetas de fatiga necesarias 
+
 7.- volver al punto 2 
 
 ## Iniciar el programa
