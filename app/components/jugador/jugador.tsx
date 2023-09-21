@@ -7,15 +7,20 @@ interface JugadorProps {
 }
 
 export const Jugador = ({ numeroJugador,faseJuego }: JugadorProps) => {
+
+  const estilosContenedorMazos = {
+    display: 'flex',
+  }
+
   return (
     <div>
       <div>Soy el jugador numero {numeroJugador} y tengo </div>
       {faseJuego===FaseJuego.Tomar &&
-       <div>
-          <div><button onClick={()=>{}}>Tomar de mazo sprinters </button></div>  
-          <div><button onClick={()=>{}}>Tomar de mazo rodador</button></div>
-        </div>}
- 
+       <div style={estilosContenedorMazos}> 
+          <Mazo tipoMazo={EnumTipoMazo.Sprinter}></Mazo>
+          <Mazo tipoMazo={EnumTipoMazo.Rodador}></Mazo>
+        </div>
+        }
     </div>
   );
 };
