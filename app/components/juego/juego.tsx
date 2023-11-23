@@ -14,20 +14,14 @@ export enum FaseJuego{
 }
 
 export const Juego = ({ numeroJugadores }: JuegoProps) => {
-  const [faseJuego,setFaseJuego] = useState <FaseJuego> (FaseJuego.Inicio);
-  const [jugadorActual] = useState <number> (2);
-  const funcionCambioFase = () =>{
-    setFaseJuego(FaseJuego.Tomar)
+  const [jugadorActual] = useState <number> (1);
 
-   }
-
+ 
   return (
     <div>
       <div>Soy EL JUEGO y tengo {numeroJugadores} jugadores</div>
-      <div>Fase actual: {faseJuego}</div>
-      <div><button onClick={funcionCambioFase}>Ir a fase de tomar</button></div>
       <div>Jugador actual: {jugadorActual} </div>
-      <Jugador numeroJugador={jugadorActual} faseJuego={faseJuego}></Jugador>
+      <Jugador numeroJugador={jugadorActual}></Jugador>
 
 
       {/*Array.from(Array(numeroJugadores).keys()).map((jugador) => {

@@ -7,9 +7,10 @@ export enum EnumTipoMazo{
 
 interface MazoProps {
     tipoMazo: EnumTipoMazo;
+    tomarCartas: (cartasTomadas: number[]) => void;
   }
 
-export const Mazo=({tipoMazo}: MazoProps ) =>{
+export const Mazo=({tipoMazo, tomarCartas}: MazoProps ) =>{
 
     const cartasSprinter = [2,2,2,3,3,3,4,4,4,5,5,5,9,9,9];
     const cartasRodador= [3,3,3,4,4,4,5,5,5,6,6,6,7,7,7];
@@ -27,20 +28,18 @@ export const Mazo=({tipoMazo}: MazoProps ) =>{
       width:"89px", 
     };
 
+    const procesarTomarCartas = ()=>{
+      const cartasTomadas = cartas.splice(0,3);
+      
+      tomarCartas(cartasTomadas);
+    }
+
     return ( 
-    <div style={estilosMazo}>
+    <div onClick={procesarTomarCartas } style={estilosMazo}>
       <div>{tipoMazo === EnumTipoMazo.Rodador ? "R" : "S"}</div>
     </div>)
 
-    /*return <div>Soy un mazo de tipo {tipoMazo} y estas son mis cartas 
-     {cartas.map((carta) => {
-        return (
-          <>
-            <Carta tipoCarta={tipoMazo} valorCarta={carta}></Carta>
-          </>
-        );
-      })}
-    </div>*/
+
 }
 
 
